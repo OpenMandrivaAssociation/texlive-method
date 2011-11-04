@@ -1,3 +1,9 @@
+# revision 17485
+# category Package
+# catalog-ctan /macros/latex/contrib/method
+# catalog-date 2010-03-14 23:46:18 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-method
 Version:	20100314
 Release:	1
@@ -46,6 +52,7 @@ option to typeset in French.
 %doc %{_texmfdistdir}/source/latex/method/Makefile
 %doc %{_texmfdistdir}/source/latex/method/method.dtx
 %doc %{_texmfdistdir}/source/latex/method/method.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ option to typeset in French.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
