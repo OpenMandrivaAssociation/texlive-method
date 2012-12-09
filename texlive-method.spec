@@ -52,3 +52,17 @@ option to typeset in French.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100314-2
++ Revision: 753931
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100314-1
++ Revision: 719004
+- texlive-method
+- texlive-method
+- texlive-method
+- texlive-method
+
