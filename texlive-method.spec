@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-method
 Version:	20100314
-Release:	2
+Release:	3
 Summary:	Typeset method and variable declarations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/method
