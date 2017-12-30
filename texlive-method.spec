@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-method
-Version:	20170414
+Version:	2.0b
 Release:	1
 Summary:	Typeset method and variable declarations
 Group:		Publishing
