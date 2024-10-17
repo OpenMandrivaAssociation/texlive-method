@@ -3,7 +3,7 @@ Version:	17485
 Release:	2
 Summary:	Typeset method and variable declarations
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/method
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/method
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/method.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/method.doc.r%{version}.tar.xz
