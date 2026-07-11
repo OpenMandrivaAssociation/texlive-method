@@ -1,49 +1,23 @@
-Name:		texlive-method
-Version:	17485
-Release:	2
+%global tl_name method
+%global tl_revision 17485
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.0b
+Release:	%{tl_revision}.1
 Summary:	Typeset method and variable declarations
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/method
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/method.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/method.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/method.source.r%{version}.tar.xz
+License:	lppl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/method.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/method.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/method.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This LaTeX package supports the typesetting of programming
-language method and variable declarations. It includes an
-option to typeset in French.
+The package supports typesetting of programming language method and
+variable declarations. It supports declarations in German, French and
+English.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/method/method.sty
-%doc %{_texmfdistdir}/doc/latex/method/README
-%doc %{_texmfdistdir}/doc/latex/method/method.pdf
-%doc %{_texmfdistdir}/doc/latex/method/methtest.tex
-#- source
-%doc %{_texmfdistdir}/source/latex/method/Makefile
-%doc %{_texmfdistdir}/source/latex/method/method.dtx
-%doc %{_texmfdistdir}/source/latex/method/method.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
